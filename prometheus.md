@@ -1,11 +1,4 @@
-# 🧭 Day 2 Workshop: Setting Up Prometheus Monitoring in EKS
-
-## 🎯 Objective
-Enable participants to understand, install, and configure Prometheus for monitoring workloads in an Amazon EKS (Elastic Kubernetes Service) cluster using `kube-prometheus-stack` with Helm and Grafana.
-
----
-
-## 1. 📘 Introduction to Prometheus
+Introduction to Prometheus
 
 ### What is Prometheus?
 Prometheus is an open-source systems monitoring and alerting toolkit originally developed by SoundCloud. It’s now a CNCF project widely used in cloud-native environments.
@@ -124,13 +117,6 @@ up
 
 ---
 
-## 🧠 Key Learning Outcomes
-- ✅ Deployed and configured Prometheus using Helm in a live EKS cluster.
-- ✅ Explored Prometheus UI and queried time-series metrics with PromQL.
-- ✅ Integrated Prometheus with Grafana and visualized Kubernetes metrics.
-
----
-
 ## 💡 Pro Tips & Troubleshooting
 - **Pod CrashLoopBackOff?**
   - Check logs: `kubectl logs <pod> -n monitoring`
@@ -144,13 +130,4 @@ up
   - Use the "Targets" tab to verify if Prometheus scrapes the metrics endpoints.
 
 ---
-
-## 🙋 Q&A + Hands-On Time
-- Encourage participants to try modifying a PromQL query.
-- Let them add new dashboards in Grafana.
-- Ask them to identify the top CPU-consuming pods in their cluster.
-
----
-
-Ready for **Day 3**? We'll dive into **Alerting with Alertmanager** and **custom application instrumentation using OpenTelemetry**!
 
