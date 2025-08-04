@@ -12,6 +12,8 @@ Monitoring is the process of collecting, analyzing, and visualizing predefined s
 Logging is the practice of recording discrete events and messages produced by applications and infrastructure. Logs provide detailed context and are essential for debugging and root cause analysis.
 
 ### What is Tracing?
+Tracing in observability refers to the process of tracking the flow of a request or transaction as it moves through various components of a system, especially in distributed systems and microservices architectures.
+
 Tracing follows the path of a single request or transaction across services, components, and processes. It helps pinpoint where latencies or failures occur in distributed systems.
 
 ### Importance in Reliability and Performance:
