@@ -91,5 +91,5 @@ OTel is a **Cloud Native Computing Foundation (CNCF)** project and is quickly be
 - [Instrumentation Libraries](https://opentelemetry.io/docs/instrumentation/)
 
 
-image.png
+
 
