@@ -6,6 +6,21 @@ Prometheus is an open-source monitoring and alerting toolkit designed for reliab
 
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/a51fadfb-533b-473a-88dc-ed49aaea59e2" />
 
+### Core Components of Prometheus
+Prometheus is built around three primary components:
+
+### Data Retrieval Worker
+This component is responsible for scraping metrics data from targets. It sends HTTP requests to the designated endpoints—typically at /metrics—to retrieve data, which is then forwarded for storage.
+
+### Time Series Database
+Collected metrics are stored in a time series database. This database maintains all numerical data, allowing for efficient retrieval and analysis over time.
+
+### HTTP Endpoint
+The built-in HTTP endpoint serves dual purposes:
+
+It allows users to execute queries using PromQL.
+It supports visualization and further analysis through tools like the Prometheus web UI and Grafana.
+The tight integration of these components ensures that Prometheus can reliably collect and analyze metrics data.
 
 ### Components:
 - **Prometheus Server**: Scrapes and stores metrics.
@@ -14,7 +29,44 @@ Prometheus is an open-source monitoring and alerting toolkit designed for reliab
 - **Alertmanager**: Manages and routes alerts.
 - **Grafana**: Visualization frontend (commonly used with Prometheus).
 
+### How Prometheus Discovers Targets
+
+Prometheus operates primarily on a pull-based model, actively scraping metrics from a predefined list of targets. This list can be configured manually or dynamically populated using service discovery mechanisms in environments such as Kubernetes or cloud infrastructures.
+
+### This pull-based approach delivers several benefits:
+
+- Clear Target Visibility: It immediately identifies when a target is down.
+- Centralized Monitoring: Keeps a definitive list of all monitored targets.
+- System Protection: Helps prevent potential overload of the metrics server.
+
+--
+
+### Exporters
+
+In many cases, applications and servers do not natively expose metrics in a format that Prometheus can parse. Exporters serve as the bridge in these situations. They:
+
+- Collect metrics from a designated system, service, or application.
+- Translate internal data into a format that Prometheus understands.
+- Expose the metrics via a /metrics endpoint for Prometheus to scrape.
+- Exporters are invaluable for integrating Prometheus with diverse systems without modifying each application's codebase.
+
 ---
+
+### Prometheus supports a variety of native exporters, including:
+
+### Node Exporter for Linux server metrics.
+### Exporters for Windows, MySQL, Apache, HAProxy, and more.
+
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/c81401a8-e6c4-4c72-9e9e-56a1b9cccffe" />
+
+### Types of Metrics
+
+Prometheus is capable of monitoring a wide range of metrics, such as:
+
+### System-level metrics: CPU and memory utilization, disk space, and service uptime.
+### Application-specific data: Exception counts, latency issues, and the number of pending requests.
+
+### This wide-ranging capability allows you to tailor monitoring precisely to your requirements. Additionally, Prometheus seamlessly integrates with various platforms—including operating systems, networking devices, and databases—ensuring a comprehensive view of your entire technology stack.
 
 ## 📂 Installation (Basic)
 
@@ -142,8 +194,8 @@ groups:
 
 ---
 
-```
-## 2. ⚙️ Setting Up Prometheus in EKS
+
+### ⚙️ Setting Up Prometheus in EKS
 
 ### Prerequisites:
 - AWS Account with sufficient IAM permissions.
@@ -168,7 +220,7 @@ eksctl create cluster \
 ```
 
 #### 🛠️ Step 2: Verify Access to Cluster
-```bash
+
 # Update kubeconfig
 aws eks --region us-west-2 update-kubeconfig --name prometheus-demo
 
