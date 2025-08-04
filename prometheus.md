@@ -1,6 +1,6 @@
-## 📌 What is Prometheus?
+### What is Prometheus?
 
-Prometheus is an open-source monitoring and alerting toolkit designed for reliability and scalability. It collects metrics, stores them as time-series data, and allows for powerful queries and visualizations.
+Prometheus is a popular open-source systems monitoring and alerting toolkit. It's designed to collect and store time-series data, making it ideal for monitoring applications and infrastructure. It uses a pull-based model to gather metrics, storing them in a time-series database with flexible querying capabilities through its query language, PromQL. 
 
 ---
 
@@ -207,7 +207,7 @@ groups:
 ### Step-by-Step Guide
 
 #### 🛠️ Step 1: Create the EKS Cluster
-```bash
+
 # Create EKS cluster with eksctl
 eksctl create cluster \
   --name prometheus-demo \
@@ -217,7 +217,7 @@ eksctl create cluster \
   --with-oidc \
   --ssh-access \
   --ssh-public-key your-key-name
-```
+
 
 #### 🛠️ Step 2: Verify Access to Cluster
 
@@ -226,23 +226,23 @@ aws eks --region us-west-2 update-kubeconfig --name prometheus-demo
 
 # Test connectivity
 kubectl get nodes
-```
 
 ---
 
-## 3. 📦 Installing `kube-prometheus-stack` with Helm
+### 3. 📦 Installing `kube-prometheus-stack` with Helm
 
 ### What is Helm?
 Helm is a package manager for Kubernetes that helps you define, install, and upgrade complex Kubernetes applications.
 
 ### Add Prometheus Community Helm Repository:
-```bash
+
+```
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
 ```
 
 ### Install the Stack:
-```bash
+```
 helm install prometheus prometheus-community/kube-prometheus-stack \
   --namespace monitoring \
   --create-namespace
@@ -258,8 +258,10 @@ You should see pods like `prometheus-kube-prometheus`, `grafana`, `alertmanager`
 ```bash
 # Grafana UI (default login: admin/prom-operator)
 kubectl port-forward svc/prometheus-grafana 3000:80 -n monitoring
+```
 
-# Prometheus UI
+### Prometheus UI
+```
 kubectl port-forward svc/prometheus-kube-prometheus-prometheus 9090 -n monitoring
 ```
 
