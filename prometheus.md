@@ -4,20 +4,6 @@ Prometheus is an open-source monitoring and alerting toolkit designed for reliab
 
 ---
 
-## 🧱 Architecture
-
-+-----------------+         +----------------+         +------------------+
-| Exporters/App   | <--pull | Prometheus     | -->push | Alertmanager     |
-| (Expose metrics)|         | (scrapes data) |         | (sends alerts)   |
-+-----------------+         +----------------+         +------------------+
-                                 |
-                                 v
-                         PromQL + Grafana
-                       (visualize/query metrics)
-
-
-````
-
 ### Components:
 - **Prometheus Server**: Scrapes and stores metrics.
 - **Exporters**: Expose metrics to be scraped (e.g., `node_exporter`, `kube-state-metrics`).
