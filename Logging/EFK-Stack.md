@@ -1,5 +1,26 @@
-### Introduction to Logging
-Logging is a critical component of observability, enabling teams to capture, store, and analyze application and system events. Logs provide insights into system behavior, errors, and performance, facilitating debugging, monitoring, and optimization. The EFK Stack is a popular open-source solution for centralized logging, combining Elasticsearch, Fluent Bit, and Kibana to create a robust observability pipeline.
+
+
+- Logging is one of the three core pillars of observability, alongside metrics and tracing. In simple terms:
+
+### What is Logging?
+- Logging is the practice of recording discrete events and messages produced by applications and infrastructure. Logs provide detailed context and are essential for debugging and root cause analysis.
+
+---
+
+### Why Logging Matters in Observability
+
+- Observability is about understanding what's going on inside your system, especially when things go wrong. Logs help answer questions like:
+
+- What happened?
+
+- When did it happen?
+
+- Why did it happen?
+
+- What was the system doing at that time?
+
+Logs provide context that metrics and traces might miss.
+
 ---
 ## 1. Introduction to EFK Stack
 - **Overview**: The EFK Stack is a powerful logging and observability framework that integrates Elasticsearch, Fluent Bit, and Kibana to collect, store, search, and visualize log data.
