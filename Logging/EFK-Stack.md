@@ -1,5 +1,5 @@
 
-### Logging is one of the three core pillars of observability, alongside metrics and tracing. In simple terms:
+### Logging is one of the three core pillars of observability, alongside metrics and tracing.
 
 ### What is Logging?
 - Logging is the practice of recording discrete events and messages produced by applications and infrastructure. Logs provide detailed context and are essential for debugging and root cause analysis.
@@ -32,6 +32,7 @@ Logs provide context that metrics and traces might miss.
 ---
 ## 2. Architecture of the EFK Stack
 
+<img width="610" height="309" alt="image" src="https://github.com/user-attachments/assets/bb654a13-31fe-4083-a36a-86f940f42892" />
 
 ---
 ### Component Roles
