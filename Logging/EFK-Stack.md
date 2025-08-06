@@ -207,6 +207,6 @@ helm install fluent-bit fluent/fluent-bit -f fluentbit-values.yaml -n logging
 - **Compliance Auditing**:
   - A financial application uses EFK to store access logs for regulatory compliance. Kibana dashboards provide auditors with detailed reports on user activity.
 ---
-## 5. Conclusion
+## 4. Conclusion
 - The EFK Stack is a cornerstone of modern observability, offering a scalable, flexible, and efficient solution for logging. By combining Fluent Bit’s lightweight log collection, Elasticsearch’s robust storage and search, and Kibana’s intuitive visualization, EFK enables organizations to monitor, troubleshoot, and optimize complex systems. Its ability to handle diverse log sources and provide real-time insights makes it indispensable for cloud-native, microservices, and DevOps environments.
 ---
